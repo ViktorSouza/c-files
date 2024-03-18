@@ -1,0 +1,1 @@
+extern int checkWinner(short[3][3], short);

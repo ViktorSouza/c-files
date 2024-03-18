@@ -1,0 +1,1 @@
+extern void printTable(short[3][3]);
