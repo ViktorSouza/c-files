@@ -48,7 +48,7 @@ int productOfPrimes(int num, int *values)
         i++;
     }
 
-    while (value > 2)
+    while (value > 1)
     {
         int smallesPrime = smallestDivisiblePrime(value);
         value = value / smallesPrime;
@@ -61,9 +61,15 @@ int productOfPrimes(int num, int *values)
 
 int main()
 {
-    int size = sizeof(int) * 5;
-    int *values = malloc(size);
-    productOfPrimes(43095, values);
+    int size = sizeof(int);
+    int *values = malloc(size * 5);
+
+    for (int i = 0; i < size; i++)
+    {
+        values[i] = 0;
+    }
+    productOfPrimes(334544222, values);
+
     for (int i = 0; i < size; i++)
     {
         if (values[i] == 0)
